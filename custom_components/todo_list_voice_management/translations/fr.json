@@ -1,0 +1,14 @@
+{
+    "title": "Gestion vocale des listes de tâches",
+    "config": {
+        "step": {
+            "user": {
+                "title": "Gestion vocale des listes de tâches",
+                "description": "Ajoute des phrases vocales pour demander ce qu'il y a sur vos listes de tâches et pour ajouter des éléments seulement s'ils manquent. Les listes doivent être exposées à Assist."
+            }
+        },
+        "abort": {
+            "single_instance_allowed": "Déjà configuré. Une seule configuration est possible."
+        }
+    }
+}

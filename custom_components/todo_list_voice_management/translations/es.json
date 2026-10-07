@@ -1,0 +1,14 @@
+{
+    "title": "Gestión por voz de listas de tareas",
+    "config": {
+        "step": {
+            "user": {
+                "title": "Gestión por voz de listas de tareas",
+                "description": "Añade frases de voz para preguntar qué hay en tus listas de tareas y para añadir elementos solo si faltan. Las listas deben estar expuestas a Assist."
+            }
+        },
+        "abort": {
+            "single_instance_allowed": "Ya está configurado. Solo es posible una configuración."
+        }
+    }
+}

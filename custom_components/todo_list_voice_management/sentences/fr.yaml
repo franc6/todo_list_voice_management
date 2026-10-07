@@ -1,0 +1,103 @@
+# Phrases et réponses en français pour todo_list_voice_management.
+#
+# Voir TRANSLATING.md dans le dépôt pour le format de ce fichier.
+# Hyphenated forms ("ajoute-le") are matched literally, so both the hyphen
+# and space spellings are listed where speech-to-text may produce either.
+
+sentences:
+  is_on_list:
+    - "(est-ce qu'il y a|est ce qu'il y a|il y a|y a-t-il|y a t il) [déjà|encore] {item} (sur|dans) [la|ma|notre] [liste [de|des|du]] <todo_list>"
+    - "(est-ce que|est ce que) {item} (est|sont) [déjà|encore] (sur|dans) [la|ma|notre] [liste [de|des|du]] <todo_list>"
+    - "{item} (est-il|est-elle|sont-ils|sont-elles|est il|est elle|sont ils|sont elles) [déjà|encore] (sur|dans) [la|ma|notre] [liste [de|des|du]] <todo_list>"
+    - "(est-ce que|est ce que) (j'ai|on a|nous avons) [déjà] (mis|ajouté|noté) {item} (sur|dans) [la|ma|notre] [liste [de|des|du]] <todo_list>"
+    - "(la|ma|notre) [liste [de|des|du]] <todo_list> (contient|comprend)[-elle| elle] {item}"
+    - "(vérifie|regarde|dis-moi|dis moi) si {item} (est|sont) (sur|dans) [la|ma|notre] [liste [de|des|du]] <todo_list>"
+
+  list_items:
+    - "(qu'est-ce qu'il y a|qu'est ce qu'il y a|qu'y a-t-il|qu'y a t il) (sur|dans) [la|ma|notre] [liste [de|des|du]] <todo_list>"
+    - "(qu'est-ce que|qu'est ce que) (j'ai|on a|nous avons) (sur|dans) [la|ma|notre] [liste [de|des|du]] <todo_list>"
+    - "que (contient|comprend) [la|ma|notre] [liste [de|des|du]] <todo_list>"
+    - "(lis|lis-moi|lis moi|dis-moi|dis moi|donne-moi|donne moi) [la|ma|notre] [liste [de|des|du]] <todo_list>"
+    - "(dis-moi|dis moi) ce qu'il y a (sur|dans) [la|ma|notre] [liste [de|des|du]] <todo_list>"
+    - "(quels|quelles) (articles|éléments|choses) (sont|y a-t-il|y a t il) (sur|dans) [la|ma|notre] [liste [de|des|du]] <todo_list>"
+
+  list_items_alphabetical:
+    - "(qu'est-ce qu'il y a|qu'est ce qu'il y a|qu'y a-t-il|qu'y a t il) (sur|dans) [la|ma|notre] [liste [de|des|du]] <todo_list> ((par|en) ordre|dans l'ordre|dans l ordre) (alphabétique|alphabetique)"
+    - "(qu'est-ce que|qu'est ce que) (j'ai|on a|nous avons) (sur|dans) [la|ma|notre] [liste [de|des|du]] <todo_list> ((par|en) ordre|dans l'ordre|dans l ordre) (alphabétique|alphabetique)"
+    - "(lis|lis-moi|lis moi|dis-moi|dis moi|donne-moi|donne moi) [la|ma|notre] [liste [de|des|du]] <todo_list> ((par|en) ordre|dans l'ordre|dans l ordre) (alphabétique|alphabetique)"
+    - "(dis-moi|dis moi) ce qu'il y a (sur|dans) [la|ma|notre] [liste [de|des|du]] <todo_list> ((par|en) ordre|dans l'ordre|dans l ordre) (alphabétique|alphabetique)"
+    - "(quels|quelles) (articles|éléments|choses) (sont|y a-t-il|y a t il) (sur|dans) [la|ma|notre] [liste [de|des|du]] <todo_list> ((par|en) ordre|dans l'ordre|dans l ordre) (alphabétique|alphabetique)"
+
+  list_items_by_due_date:
+    - "(qu'est-ce qu'il y a|qu'est ce qu'il y a|qu'y a-t-il|qu'y a t il) (sur|dans) [la|ma|notre] [liste [de|des|du]] <todo_list> ([triée|trié|triées|triés] par (date d'échéance|date d'echeance|échéance|echeance|priorité|priorite)|(par ordre|dans l'ordre|dans l ordre) (de priorité|de priorite|d'échéance|d'echeance))"
+    - "(qu'est-ce que|qu'est ce que) (j'ai|on a|nous avons) (sur|dans) [la|ma|notre] [liste [de|des|du]] <todo_list> ([triée|trié|triées|triés] par (date d'échéance|date d'echeance|échéance|echeance|priorité|priorite)|(par ordre|dans l'ordre|dans l ordre) (de priorité|de priorite|d'échéance|d'echeance))"
+    - "(lis|lis-moi|lis moi|dis-moi|dis moi|donne-moi|donne moi) [la|ma|notre] [liste [de|des|du]] <todo_list> ([triée|trié|triées|triés] par (date d'échéance|date d'echeance|échéance|echeance|priorité|priorite)|(par ordre|dans l'ordre|dans l ordre) (de priorité|de priorite|d'échéance|d'echeance))"
+    - "(dis-moi|dis moi) ce qu'il y a (sur|dans) [la|ma|notre] [liste [de|des|du]] <todo_list> ([triée|trié|triées|triés] par (date d'échéance|date d'echeance|échéance|echeance|priorité|priorite)|(par ordre|dans l'ordre|dans l ordre) (de priorité|de priorite|d'échéance|d'echeance))"
+    - "(quels|quelles) (articles|éléments|choses) (sont|y a-t-il|y a t il) (sur|dans) [la|ma|notre] [liste [de|des|du]] <todo_list> ([triée|trié|triées|triés] par (date d'échéance|date d'echeance|échéance|echeance|priorité|priorite)|(par ordre|dans l'ordre|dans l ordre) (de priorité|de priorite|d'échéance|d'echeance))"
+
+  add_if_missing:
+    - "si {item} (n'est|ne sont) pas [déjà|encore] (sur|dans) [la|ma|notre] [liste [de|des|du]] <todo_list> [alors] (ajoute|mets|note)(-le|-la|-les| le| la| les)"
+    - "si (je n'ai|on n'a|nous n'avons) pas [encore] {item} (sur|dans) [la|ma|notre] [liste [de|des|du]] <todo_list> [alors] (ajoute|mets|note)(-le|-la|-les| le| la| les)"
+    - "(ajoute|mets|note) {item} (à|sur|dans) [la|ma|notre] [liste [de|des|du]] <todo_list> (s'il|s'ils|si elle|si elles) n'y (est|sont) pas [déjà|encore]"
+    - "(ajoute|mets|note) {item} (à|sur|dans) [la|ma|notre] [liste [de|des|du]] <todo_list> (s'il|s'ils|si elle|si elles) (manque|manquent)"
+    - "(ajoute|mets|note) {item} (à|sur|dans) [la|ma|notre] [liste [de|des|du]] <todo_list> sauf (s'il|s'ils|si elle|si elles) y (est|sont) déjà"
+    - "(assure-toi|assure toi|vérifie) que {item} (est|soit|sont|soient) (sur|dans) [la|ma|notre] [liste [de|des|du]] <todo_list>"
+
+# Items are quoted (« ») so responses are correct whatever the gender and
+# number of the item, and need no article.
+responses:
+  item_on_list: "Oui, « {{ item }} » est bien sur {{ list }}."
+
+  item_on_list_with_count: >-
+    Oui, « {{ item }} » est bien sur {{ list }}, et il en faut
+    {% if count == 1 %}un seul{% else %}{{ count }}{% endif %}.
+
+  item_not_on_list: "Non, « {{ item }} » n'est pas sur {{ list }}."
+
+  # French uses the singular for 0 and 1.
+  list_contents: >-
+    {% if item_count < 2 %}Il n'y a qu'une chose sur {{ list }} : {{ items }}.
+    {%- else %}Il y a {{ item_count }} choses sur {{ list }} : {{ items }}.
+    {%- endif %}
+
+  list_empty: "Il n'y a rien sur {{ list }}."
+
+  item_added: "D'accord, j'ai ajouté « {{ item }} » à {{ list }}."
+
+  item_already_on_list: "« {{ item }} » est déjà sur {{ list }}."
+
+  item_already_on_list_with_count: >-
+    « {{ item }} » est déjà sur {{ list }}, et il en faut
+    {% if count == 1 %}un seul{% else %}{{ count }}{% endif %}.
+
+  add_not_supported: "Désolé, je ne peux rien ajouter à {{ list }}."
+
+  error: "Désolé, un problème est survenu avec {{ list }}."
+
+item_prefixes:
+  - "le "
+  - "la "
+  - "les "
+  - "l'"
+  - "du "
+  - "de la "
+  - "de l'"
+  - "des "
+  - "de "
+  - "d'"
+  - "un "
+  - "une "
+
+formatting:
+  # "Courses" devient « la liste Courses » ; « Liste de courses » reste
+  # « la liste de courses ».
+  list_name: >-
+    {% if (name | lower).startswith('liste') %}la {{ name | lower }}
+    {%- else %}la liste {{ name }}{% endif %}
+
+  list_entry: >-
+    {% if count is not none %}{{ count }} {% endif %}{{ item }}
+
+  separator: ", "
+  final_separator: " et "
+  pair_separator: " et "

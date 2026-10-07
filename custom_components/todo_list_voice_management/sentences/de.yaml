@@ -1,0 +1,97 @@
+# Deutsche Sätze und Antworten für todo_list_voice_management.
+#
+# Siehe TRANSLATING.md im Repository für das Format dieser Datei.
+# German list names are usually compounds ("Einkaufsliste"), so sentences
+# accept both "auf der Einkaufsliste" and "auf der Liste Einkaufen".
+
+sentences:
+  is_on_list:
+    - "(steht|stehen|ist|sind) [denn] [schon|bereits|noch] {item} auf [der|dem|meiner|meinem|unserer|unserem] [liste] <todo_list> [liste]"
+    - "(habe ich|hab ich|haben wir) [denn] [schon|bereits|noch] {item} auf [der|dem|meiner|meinem|unserer|unserem] [liste] <todo_list> [liste]"
+    - "(habe ich|hab ich|haben wir) [schon|bereits] {item} auf [die|den|meine|meinen|unsere|unseren] [liste] <todo_list> [liste] (gesetzt|geschrieben)"
+    - "(enthält|hat) [die|der|meine|mein|unsere|unser] [liste] <todo_list> [liste] [schon|bereits] {item}"
+    - "(schau|prüfe|prüf|sag mir) ob {item} auf [der|dem|meiner|meinem|unserer|unserem] [liste] <todo_list> [liste] (steht|stehen|ist|sind)"
+
+  list_items:
+    - "was (steht|ist) [alles] auf [der|dem|meiner|meinem|unserer|unserem] [liste] <todo_list> [liste]"
+    - "was haben wir [alles] auf [der|dem|meiner|meinem|unserer|unserem] [liste] <todo_list> [liste]"
+    - "welche (sachen|dinge|einträge|artikel) (stehen|sind) auf [der|dem|meiner|meinem|unserer|unserem] [liste] <todo_list> [liste]"
+    - "(lies|lies mir|sag mir) [die|den|meine|meinen|unsere|unseren] [liste] <todo_list> [liste] [vor]"
+    - "(lies mir vor|sag mir) was auf [der|dem|meiner|meinem|unserer|unserem] [liste] <todo_list> [liste] steht"
+
+  list_items_alphabetical:
+    - "was (steht|ist) [alles] auf [der|dem|meiner|meinem|unserer|unserem] [liste] <todo_list> [liste] (alphabetisch [sortiert|geordnet]|in alphabetischer reihenfolge|nach dem alphabet [sortiert|geordnet])"
+    - "was haben wir [alles] auf [der|dem|meiner|meinem|unserer|unserem] [liste] <todo_list> [liste] (alphabetisch [sortiert|geordnet]|in alphabetischer reihenfolge|nach dem alphabet [sortiert|geordnet])"
+    - "welche (sachen|dinge|einträge|artikel) (stehen|sind) auf [der|dem|meiner|meinem|unserer|unserem] [liste] <todo_list> [liste] (alphabetisch [sortiert|geordnet]|in alphabetischer reihenfolge|nach dem alphabet [sortiert|geordnet])"
+    - "(lies|lies mir|sag mir) [die|den|meine|meinen|unsere|unseren] [liste] <todo_list> [liste] (alphabetisch [sortiert|geordnet]|in alphabetischer reihenfolge|nach dem alphabet [sortiert|geordnet]) [vor]"
+    - "(lies mir vor|sag mir) was auf [der|dem|meiner|meinem|unserer|unserem] [liste] <todo_list> [liste] (alphabetisch [sortiert|geordnet]|in alphabetischer reihenfolge|nach dem alphabet [sortiert|geordnet]) steht"
+
+  list_items_by_due_date:
+    - "was (steht|ist) [alles] auf [der|dem|meiner|meinem|unserer|unserem] [liste] <todo_list> [liste] (nach (fälligkeit|fälligkeitsdatum|priorität) [sortiert|geordnet])"
+    - "was haben wir [alles] auf [der|dem|meiner|meinem|unserer|unserem] [liste] <todo_list> [liste] (nach (fälligkeit|fälligkeitsdatum|priorität) [sortiert|geordnet])"
+    - "welche (sachen|dinge|einträge|artikel) (stehen|sind) auf [der|dem|meiner|meinem|unserer|unserem] [liste] <todo_list> [liste] (nach (fälligkeit|fälligkeitsdatum|priorität) [sortiert|geordnet])"
+    - "(lies|lies mir|sag mir) [die|den|meine|meinen|unsere|unseren] [liste] <todo_list> [liste] (nach (fälligkeit|fälligkeitsdatum|priorität) [sortiert|geordnet]) [vor]"
+    - "(lies mir vor|sag mir) was auf [der|dem|meiner|meinem|unserer|unserem] [liste] <todo_list> [liste] (nach (fälligkeit|fälligkeitsdatum|priorität) [sortiert|geordnet]) steht"
+
+  add_if_missing:
+    - "wenn {item} [noch] nicht auf [der|dem|meiner|meinem|unserer|unserem] [liste] <todo_list> [liste] (steht|stehen|ist|sind) [dann] (füge|füg|setze|setz|schreibe|schreib) (es|sie|ihn) [hinzu|drauf|darauf]"
+    - "(füge|füg) {item} (zur|zum|zu der|zu dem|zu meiner|zu meinem|zu unserer|zu unserem) [liste] <todo_list> [liste] hinzu (falls|wenn|sofern) (es|sie|er) [noch] nicht (drauf|darauf|da) (ist|steht|sind|stehen)"
+    - "(setze|setz|schreibe|schreib) {item} auf [die|den|meine|meinen|unsere|unseren] [liste] <todo_list> [liste] (falls|wenn|sofern) (es|sie|er) [noch] nicht (drauf|darauf|da) (ist|steht|sind|stehen)"
+    - "(füge|füg) {item} (zur|zum|zu der|zu dem|zu meiner|zu meinem|zu unserer|zu unserem) [liste] <todo_list> [liste] hinzu (falls|wenn|sofern) (es|sie|er) (fehlt|fehlen)"
+    - "(sorge dafür|stelle sicher|stell sicher) dass {item} auf [der|dem|meiner|meinem|unserer|unserem] [liste] <todo_list> [liste] (steht|stehen|ist|sind)"
+
+# Responses use "du hast ..." so they are correct for singular and plural
+# items alike.
+responses:
+  item_on_list: "Ja, du hast {{ item }} auf {{ list }}."
+
+  item_on_list_with_count: >-
+    Ja, du hast {{ item }} auf {{ list }}, und du brauchst
+    {% if count == 1 %}nur eins{% else %}{{ count }}{% endif %}.
+
+  item_not_on_list: "Nein, du hast {{ item }} nicht auf {{ list }}."
+
+  list_contents: >-
+    {% if item_count == 1 %}Auf {{ list }} steht nur eine Sache: {{ items }}.
+    {%- else %}Auf {{ list }} stehen {{ item_count }} Sachen: {{ items }}.
+    {%- endif %}
+
+  list_empty: "Auf {{ list }} steht nichts."
+
+  item_added: "OK, ich habe {{ item }} auf {{ list }} notiert."
+
+  item_already_on_list: "Du hast {{ item }} schon auf {{ list }}."
+
+  item_already_on_list_with_count: >-
+    Du hast {{ item }} schon auf {{ list }}, und du brauchst
+    {% if count == 1 %}nur eins{% else %}{{ count }}{% endif %}.
+
+  add_not_supported: "Leider kann ich bei {{ list }} nichts hinzufügen."
+
+  error: "Leider ist bei {{ list }} etwas schiefgelaufen."
+
+item_prefixes:
+  - "der "
+  - "die "
+  - "das "
+  - "den "
+  - "dem "
+  - "ein "
+  - "eine "
+  - "einen "
+  - "etwas "
+  - "noch "
+
+formatting:
+  # Dative, as used after "auf" and "bei".  "Einkaufsliste" becomes
+  # "der Einkaufsliste"; "Einkaufen" becomes "der Liste Einkaufen".
+  list_name: >-
+    {% if (name | lower).endswith('liste') %}der {{ name }}
+    {%- else %}der Liste {{ name }}{% endif %}
+
+  list_entry: >-
+    {% if count is not none %}{{ count }} {% endif %}{{ item }}
+
+  separator: ", "
+  final_separator: " und "
+  pair_separator: " und "

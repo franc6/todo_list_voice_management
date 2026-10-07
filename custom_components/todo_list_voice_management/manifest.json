@@ -1,0 +1,14 @@
+{
+    "domain": "todo_list_voice_management",
+    "name": "To-do List Voice Management",
+    "codeowners": ["@franc6"],
+    "config_flow": true,
+    "dependencies": ["conversation", "todo"],
+    "documentation": "https://github.com/franc6/todo_list_voice_management",
+    "integration_type": "service",
+    "iot_class": "calculated",
+    "issue_tracker": "https://github.com/franc6/todo_list_voice_management/issues",
+    "requirements": [],
+    "single_config_entry": true,
+    "version": "0.1.0"
+}

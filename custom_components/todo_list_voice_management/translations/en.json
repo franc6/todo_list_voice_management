@@ -1,0 +1,14 @@
+{
+    "title": "To-do List Voice Management",
+    "config": {
+        "step": {
+            "user": {
+                "title": "To-do List Voice Management",
+                "description": "Adds voice sentences for asking what is on your to-do lists and for adding items only when they are missing. Lists must be exposed to Assist."
+            }
+        },
+        "abort": {
+            "single_instance_allowed": "Already configured. Only a single configuration is possible."
+        }
+    }
+}

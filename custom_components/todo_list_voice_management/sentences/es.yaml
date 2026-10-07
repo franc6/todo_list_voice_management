@@ -1,0 +1,92 @@
+# Frases y respuestas en español para todo_list_voice_management.
+#
+# Consulta TRANSLATING.md en el repositorio para el formato de este archivo.
+
+sentences:
+  is_on_list:
+    - "(hay|tengo|tenemos) [ya|todavía] {item} en [la|mi|nuestra] [lista [de]] <todo_list>"
+    - "(está|esta|están|estan) [ya|todavía] {item} en [la|mi|nuestra] [lista [de]] <todo_list>"
+    - "{item} (está|esta|están|estan) [ya|todavía] en [la|mi|nuestra] [lista [de]] <todo_list>"
+    - "(he|hemos|has) (puesto|añadido|agregado|apuntado) [ya] {item} (en|a) [la|mi|nuestra] [lista [de]] <todo_list>"
+    - "(tiene|contiene|incluye) [la|mi|nuestra] [lista [de]] <todo_list> {item}"
+    - "(mira|comprueba|dime) si (hay|está|esta|están|estan|tengo|tenemos) {item} en [la|mi|nuestra] [lista [de]] <todo_list>"
+
+  list_items:
+    - "(qué|que) (hay|tengo|tenemos|pone) en [la|mi|nuestra] [lista [de]] <todo_list>"
+    - "(qué|que) (cosas|artículos|articulos) (hay|tengo|tenemos) en [la|mi|nuestra] [lista [de]] <todo_list>"
+    - "(léeme|leeme|lee|dime) [la|mi|nuestra] [lista [de]] <todo_list>"
+    - "(léeme|leeme|dime) (qué|que|lo que) hay en [la|mi|nuestra] [lista [de]] <todo_list>"
+
+  list_items_alphabetical:
+    - "(qué|que) (hay|tengo|tenemos|pone) en [la|mi|nuestra] [lista [de]] <todo_list> ((en|por) orden (alfabético|alfabetico)|alfabéticamente|alfabeticamente)"
+    - "(qué|que) (cosas|artículos|articulos) (hay|tengo|tenemos) en [la|mi|nuestra] [lista [de]] <todo_list> ((en|por) orden (alfabético|alfabetico)|alfabéticamente|alfabeticamente)"
+    - "(léeme|leeme|lee|dime) [la|mi|nuestra] [lista [de]] <todo_list> ((en|por) orden (alfabético|alfabetico)|alfabéticamente|alfabeticamente)"
+    - "(léeme|leeme|dime) (qué|que|lo que) hay en [la|mi|nuestra] [lista [de]] <todo_list> ((en|por) orden (alfabético|alfabetico)|alfabéticamente|alfabeticamente)"
+
+  list_items_by_due_date:
+    - "(qué|que) (hay|tengo|tenemos|pone) en [la|mi|nuestra] [lista [de]] <todo_list> ([ordenada|ordenado|ordenadas|ordenados] por (fecha de vencimiento|fecha límite|fecha limite|vencimiento|prioridad)|(en|por) orden de (vencimiento|prioridad))"
+    - "(qué|que) (cosas|artículos|articulos) (hay|tengo|tenemos) en [la|mi|nuestra] [lista [de]] <todo_list> ([ordenada|ordenado|ordenadas|ordenados] por (fecha de vencimiento|fecha límite|fecha limite|vencimiento|prioridad)|(en|por) orden de (vencimiento|prioridad))"
+    - "(léeme|leeme|lee|dime) [la|mi|nuestra] [lista [de]] <todo_list> ([ordenada|ordenado|ordenadas|ordenados] por (fecha de vencimiento|fecha límite|fecha limite|vencimiento|prioridad)|(en|por) orden de (vencimiento|prioridad))"
+    - "(léeme|leeme|dime) (qué|que|lo que) hay en [la|mi|nuestra] [lista [de]] <todo_list> ([ordenada|ordenado|ordenadas|ordenados] por (fecha de vencimiento|fecha límite|fecha limite|vencimiento|prioridad)|(en|por) orden de (vencimiento|prioridad))"
+
+  add_if_missing:
+    - "si no (hay|está|esta|están|estan|tengo|tenemos) {item} en [la|mi|nuestra] [lista [de]] <todo_list> (añádelo|añádela|añádelos|añádelas|agrégalo|agrégala|agrégalos|agrégalas|ponlo|ponla|ponlos|ponlas|apúntalo|apúntala|apúntalos|apúntalas)"
+    - "si {item} no (está|esta|están|estan) en [la|mi|nuestra] [lista [de]] <todo_list> (añádelo|añádela|añádelos|añádelas|agrégalo|agrégala|agrégalos|agrégalas|ponlo|ponla|ponlos|ponlas|apúntalo|apúntala|apúntalos|apúntalas)"
+    - "(añade|agrega|pon|apunta) {item} (a|en) [la|mi|nuestra] [lista [de]] <todo_list> si no (está|esta|están|estan) [ya]"
+    - "(añade|agrega|pon|apunta) {item} (a|en) [la|mi|nuestra] [lista [de]] <todo_list> si (falta|faltan)"
+    - "(añade|agrega|pon|apunta) {item} (a|en) [la|mi|nuestra] [lista [de]] <todo_list> a menos que (ya esté|ya estén|ya este|ya esten)"
+    - "(asegúrate|asegurate) de que {item} (está|esté|esta|este|están|estén|estan|esten) en [la|mi|nuestra] [lista [de]] <todo_list>"
+
+responses:
+  item_on_list: "Sí, tienes {{ item }} en {{ list }}."
+
+  item_on_list_with_count: >-
+    Sí, tienes {{ item }} en {{ list }} y necesitas
+    {% if count == 1 %}solo una unidad{% else %}{{ count }} unidades{% endif %}.
+
+  item_not_on_list: "No, no tienes {{ item }} en {{ list }}."
+
+  list_contents: >-
+    {% if item_count == 1 %}En {{ list }} solo hay una cosa: {{ items }}.
+    {%- else %}En {{ list }} hay {{ item_count }} cosas: {{ items }}.
+    {%- endif %}
+
+  list_empty: "No hay nada en {{ list }}."
+
+  item_added: "Vale, he añadido {{ item }} a {{ list }}."
+
+  item_already_on_list: "Ya tienes {{ item }} en {{ list }}."
+
+  item_already_on_list_with_count: >-
+    Ya tienes {{ item }} en {{ list }} y necesitas
+    {% if count == 1 %}solo una unidad{% else %}{{ count }} unidades{% endif %}.
+
+  add_not_supported: "Lo siento, no puedo añadir cosas a {{ list }}."
+
+  error: "Lo siento, algo ha fallado con {{ list }}."
+
+item_prefixes:
+  - "el "
+  - "la "
+  - "los "
+  - "las "
+  - "un "
+  - "una "
+  - "unos "
+  - "unas "
+  - "algo de "
+  - "más "
+
+formatting:
+  # "Compras" se convierte en "la lista de Compras"; "Lista de la compra"
+  # queda como "la lista de la compra".
+  list_name: >-
+    {% if (name | lower).startswith('lista') %}la {{ name | lower }}
+    {%- else %}la lista de {{ name }}{% endif %}
+
+  list_entry: >-
+    {% if count is not none %}{{ count }} {% endif %}{{ item }}
+
+  separator: ", "
+  final_separator: " y "
+  pair_separator: " y "

@@ -1,0 +1,14 @@
+{
+    "title": "To-do-Listen-Sprachsteuerung",
+    "config": {
+        "step": {
+            "user": {
+                "title": "To-do-Listen-Sprachsteuerung",
+                "description": "Fügt Sprachbefehle hinzu, mit denen du fragen kannst, was auf deinen To-do-Listen steht, und Einträge nur dann hinzufügen kannst, wenn sie fehlen. Die Listen müssen für Assist freigegeben sein."
+            }
+        },
+        "abort": {
+            "single_instance_allowed": "Bereits konfiguriert. Nur eine einzige Konfiguration ist möglich."
+        }
+    }
+}

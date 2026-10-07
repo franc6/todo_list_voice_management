@@ -1,0 +1,52 @@
+name: Lint
+
+on:
+  pull_request:
+    branches: [releases]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v3
+        with:
+          version: "0.10.9"
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version-file: "pyproject.toml"
+
+      - name: Install dependencies
+        run: |
+          rm -rf .venv
+          uv sync --prerelease=allow --dev --extra tests
+          ls -la .venv
+
+      - name: Run isort --check
+        run: |
+          uv run --prerelease=allow isort --check custom_components/todo_list_voice_management tests
+
+      - name: Run black --check
+        run: |
+          uv run --prerelease=allow black --check custom_components/todo_list_voice_management tests
+
+      - name: Run flake8
+        run: |
+          uv run --prerelease=allow flake8
+
+      - name: Run pydocstyle
+        run: |
+          uv run --prerelease=allow pydocstyle -v custom_components/todo_list_voice_management tests
+
+      - name: Run pylint
+        run: |
+          uv run --prerelease=allow pylint custom_components/todo_list_voice_management
+
+      - name: Run bandit
+        run: |
+          uv run --prerelease=allow bandit -r -q custom_components/todo_list_voice_management

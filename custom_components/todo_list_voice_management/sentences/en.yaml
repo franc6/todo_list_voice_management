@@ -1,0 +1,118 @@
+# English sentences and responses for todo_list_voice_management.
+#
+# See TRANSLATING.md in the repository for how this file works.  In short:
+#   - Sentences use hassil template syntax: (a|b) is a choice, [a] is
+#     optional.  <todo_list> is replaced by each list's name and aliases, and
+#     {item} matches whatever words the user says there.
+#   - Responses and formatting templates are Jinja2 templates, so plurals and
+#     grammar can be handled with {% if %} blocks.
+
+sentences:
+  # Variables available to responses: item, count, list, list_name.
+  is_on_list:
+    - "(is|are) [there] {item} [already|still] on [the|my|our] <todo_list> [list]"
+    - "(do|did) (I|we) (have|put|add|get) {item} (on|in) [the|my|our] <todo_list> [list] [already|yet]"
+    - "(have|has) (I|we|someone|anyone) [already] (put|added) {item} (on|to) [the|my|our] <todo_list> [list] [already|yet]"
+    - "(has|have) {item} [already] been (added|put) (on|to) [the|my|our] <todo_list> [list] [already|yet]"
+    - "(does|do) [the|my|our] <todo_list> [list] (have|include|contain|list|mention) {item}"
+    - "(check|tell me|see) (if|whether) {item} (is|are) on [the|my|our] <todo_list> [list]"
+
+  # Variables available to responses: items, item_count, list, list_name.
+  list_items:
+    - "(what's|what is|whats) (on|in) [the|my|our] <todo_list> [list]"
+    - "what (do (I|we) have|have (I|we) [got]) (on|in) [the|my|our] <todo_list> [list]"
+    - "what (items|things) are (on|in) [the|my|our] <todo_list> [list]"
+    - "(which|what) (items|things) (do (I|we) have|have (I|we) [got]) (on|in) [the|my|our] <todo_list> [list]"
+    - "(read|tell|give) [me|us] [the|my|our] <todo_list> [list]"
+    - "(read|tell) [me|us] what('s| is) (on|in) [the|my|our] <todo_list> [list]"
+    - "(list|read) [me|us] (everything|the items|all the items|all items) (on|in) [the|my|our] <todo_list> [list]"
+
+  # The same as list_items, but read in alphabetical order.  Uses the same
+  # responses as list_items.
+  list_items_alphabetical:
+    - "(what's|what is|whats) (on|in) [the|my|our] <todo_list> [list] (in alphabetical order|alphabetically|alphabetized|sorted alphabetically|from a to z)"
+    - "what (do (I|we) have|have (I|we) [got]) (on|in) [the|my|our] <todo_list> [list] (in alphabetical order|alphabetically|alphabetized|sorted alphabetically|from a to z)"
+    - "what (items|things) are (on|in) [the|my|our] <todo_list> [list] (in alphabetical order|alphabetically|alphabetized|sorted alphabetically|from a to z)"
+    - "(read|tell|give|list) [me|us] [the|my|our] <todo_list> [list] (in alphabetical order|alphabetically|alphabetized|sorted alphabetically|from a to z)"
+    - "(read|tell|give) [me|us] [the|my|our] alphabetized <todo_list> [list]"
+    - "(read|tell) [me|us] what('s| is) (on|in) [the|my|our] <todo_list> [list] (in alphabetical order|alphabetically|alphabetized|sorted alphabetically|from a to z)"
+    - "(list|read) [me|us] (everything|the items|all the items|all items) (on|in) [the|my|our] <todo_list> [list] (in alphabetical order|alphabetically|alphabetized|sorted alphabetically|from a to z)"
+
+  # The same as list_items, but read by due date, soonest first, with
+  # items that have no due date last.  Uses the same responses as
+  # list_items.
+  list_items_by_due_date:
+    - "(what's|what is|whats) (on|in) [the|my|our] <todo_list> [list] ([sorted|ordered] by (due date|priority)|in order of (due date|priority)|in (due date|priority) order)"
+    - "what (do (I|we) have|have (I|we) [got]) (on|in) [the|my|our] <todo_list> [list] ([sorted|ordered] by (due date|priority)|in order of (due date|priority)|in (due date|priority) order)"
+    - "what (items|things) are (on|in) [the|my|our] <todo_list> [list] ([sorted|ordered] by (due date|priority)|in order of (due date|priority)|in (due date|priority) order)"
+    - "(read|tell|give|list) [me|us] [the|my|our] <todo_list> [list] ([sorted|ordered] by (due date|priority)|in order of (due date|priority)|in (due date|priority) order)"
+    - "(read|tell) [me|us] what('s| is) (on|in) [the|my|our] <todo_list> [list] ([sorted|ordered] by (due date|priority)|in order of (due date|priority)|in (due date|priority) order)"
+    - "(list|read) [me|us] (everything|the items|all the items|all items) (on|in) [the|my|our] <todo_list> [list] ([sorted|ordered] by (due date|priority)|in order of (due date|priority)|in (due date|priority) order)"
+
+  # Variables available to responses: item, count, list, list_name.
+  add_if_missing:
+    - "if {item} (isn't|is not|aren't|are not) [already] (on|in) [the|my|our] <todo_list> [list] [then] (add|put) (it|them) [on|there]"
+    - "if (I|we) (don't|do not) [already] have {item} (on|in) [the|my|our] <todo_list> [list] [then] (add|put) (it|them) [on|there]"
+    - "(add|put) {item} (to|on) [the|my|our] <todo_list> [list] if (it's|it is|they're|they are) not [already] (there|on it|on there|on the list)"
+    - "(add|put) {item} (to|on) [the|my|our] <todo_list> [list] if (it|they) (isn't|aren't) [already] (there|on it|on there|on the list)"
+    - "(add|put) {item} (to|on) [the|my|our] <todo_list> [list] unless (it's|it is|they're|they are) already (there|on it|on there|on the list)"
+    - "(add|put) {item} (to|on) [the|my|our] <todo_list> [list] if (it's|it is|they're|they are) missing"
+    - "make sure {item} (is|are) on [the|my|our] <todo_list> [list]"
+
+responses:
+  # The item is on the list without a count.
+  item_on_list: "Yes, you've got {{ item }} on {{ list }}."
+
+  # The item is on the list as "<item> (<count>)".
+  item_on_list_with_count: >-
+    Yes, you've got {{ item }} on {{ list }}, and you need
+    {% if count == 1 %}just one{% else %}{{ count }}{% endif %}.
+
+  item_not_on_list: "No, you don't have {{ item }} on {{ list }}."
+
+  # items is already joined and formatted with list_entry below.
+  list_contents: >-
+    {% if item_count == 1 %}There's just one thing on {{ list }}: {{ items }}.
+    {%- else %}There are {{ item_count }} things on {{ list }}: {{ items }}.
+    {%- endif %}
+
+  list_empty: "There's nothing on {{ list }}."
+
+  item_added: "OK, I added {{ item }} to {{ list }}."
+
+  item_already_on_list: "You've already got {{ item }} on {{ list }}."
+
+  item_already_on_list_with_count: >-
+    You've already got {{ item }} on {{ list }}, and you need
+    {% if count == 1 %}just one{% else %}{{ count }}{% endif %}.
+
+  add_not_supported: "Sorry, I can't add things to {{ list }}."
+
+  error: "Sorry, something went wrong with {{ list }}."
+
+# Words stripped from the start of a spoken item before it's looked up or
+# added, so "is there any milk on the list" looks for "milk".  Include a
+# trailing space unless the word attaches directly (like French "l'").
+item_prefixes:
+  - "the "
+  - "a "
+  - "an "
+  - "some "
+  - "any "
+  - "more "
+
+formatting:
+  # How a list is referred to in responses (as {{ list }}).  Variable: name.
+  # "Groceries" becomes "the Groceries list", but "Shopping List" stays
+  # "the Shopping List".
+  list_name: >-
+    the {{ name }}{% if not (name | lower).endswith('list') %} list{% endif %}
+
+  # How each item is read by list_contents.  Variables: item, count (or none).
+  list_entry: >-
+    {% if count is not none %}{{ count }} {% endif %}{{ item }}
+
+  # How items are joined: "milk and eggs", "milk, eggs, and bread".
+  separator: ", "
+  final_separator: ", and "
+  pair_separator: " and "
