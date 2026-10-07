@@ -21,7 +21,7 @@ tests = [
 
 [dependency-groups]
 dev = [
-    'black>26',
+    'black>=26.10.0',
     'isort',
     'flake8>=7.4.1',
     'flake8-pyproject',
