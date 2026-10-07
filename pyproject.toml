@@ -9,7 +9,7 @@ dependencies = []
 tests = [
     'pytest',
     'pytest-cov',
-    'pytest-homeassistant-custom-component>=0.13.366',
+    'pytest-homeassistant-custom-component>=0.13.368',
     'pytest-asyncio',
     # Requirements of HA's conversation integration, which are not pulled in
     # by pytest-homeassistant-custom-component.
