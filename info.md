@@ -36,6 +36,8 @@ The word "list" after the list's name is optional, and "the", "my", and "our" ar
 ### Counts
 If an item on a list looks like `Milk (2)`, with a number in parentheses at the end, the number is treated as how many you need.  Asking about milk gets "Yes, you've got Milk on the Shopping List, and you need 2."  Reading the list says "2 Milk".  Any digits work, including non-ASCII digits.
 
+This is the convention [OurGroceries](https://www.ourgroceries.com/) uses for quantities.  Other ways of writing a count aren't recognized yet; support for other conventions may be added in the future (submit a PR or issue).
+
 ### How items are matched
 - Matching ignores case and extra spaces, so "milk" matches "Milk".
 - Leading words such as "the", "some", or "any" are ignored, so "is there any milk on the list" looks for "milk".  Each language has its own list of these words.
