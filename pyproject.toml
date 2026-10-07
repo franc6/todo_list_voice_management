@@ -16,7 +16,7 @@ tests = [
     'hassil',
     'home-assistant-intents',
     'gazetteer-matcher',
-    'mashumaro>=3.22',
+    'mashumaro>=3.23',
 ]
 
 [dependency-groups]
